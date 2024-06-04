@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="menu.css">
+
+  <script src="menu.js"></script>
+    <title>Simple POS System</title>
+   
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+
+            <button class="nav-btn" onclick="navigate()">Home</button>
+                <h1><span style="color:crimson;">R</span>omantic<span style="color:crimson;">B</span>aboy</h1>
+        </div>
+        <div class="content">
+            <div class="items">
+                <div class="item" onclick="updateSelectedItems('quantity1', 'BULGOGI', 'img/menu/menu-bulgogi.png')">
+                    <img src="img\menu\menu-bulgogi.png" alt="Product 1">
+                    <div class="item-info">
+                        <p class="item-name">BULGOGI</p>
+                        <p class="item-name" >$10.00</p>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" onclick="decrementQuantity('quantity1')">-</button>
+                            <input type="number" name="quantity1" id="quantity1" value="0" min="0" onchange="updateSelectedItems('quantity1')">
+                            <button class="quantity-btn" onclick="incrementQuantity('quantity1')">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" onclick="updateSelectedItems('quantity2', 'BULGOGI-CHICKEN', 'img\menu\menu-bulgogichicken.png')">
+                    <img src="img\menu\menu-bulgogichicken.png" alt="Product 2">
+                    <div class="item-info">
+                        <p class="item-name">BULGOGI-CHICKEN</p>
+                        <p class="item-name">$15.00</p>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" onclick="decrementQuantity('quantity2')">-</button>
+                            <input type="number" name="quantity2" id="quantity2" value="0" min="0" onchange="updateSelectedItems('quantity2')">
+                            <button class="quantity-btn" onclick="incrementQuantity('quantity2')">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" onclick="updateSelectedItems('quantity3', 'DAEPE', 'img\menu\menu-daepe.png')">
+                    <img src="img\menu\menu-daepe.png" alt="Product 3">
+                    <div class="item-info">
+                        <p class="item-name" >DAEPE</p>
+                        <p class="item-name">$20.00</p>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" onclick="decrementQuantity('quantity3')">-</button>
+                            <input type="number" name="quantity3" id="quantity3" value="0" min="0" onchange="updateSelectedItems('quantity3')">
+                            <button class="quantity-btn" onclick="incrementQuantity('quantity3')">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" onclick="updateSelectedItems('quantity4', 'GALBI', 'img\menu\menu-galbi.png')">
+                    <img src="img\menu\menu-galbi.png" alt="Product 4">
+                    <div class="item-info">
+                        <p class="item-name" >GALBI</p>
+                        <p class="item-name">$30.00</p>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" onclick="decrementQuantity('quantity4')">-</button>
+                            <input type="number" name="quantity4" id="quantity4" value="0" min="0" onchange="updateSelectedItems('quantity4')">
+                            <button class="quantity-btn" onclick="incrementQuantity('quantity4')">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" onclick="updateSelectedItems('quantity5', 'HURB', 'img\menu\menu-hurb.png')" >
+                    <img src="img\menu\menu-hurb.png" alt="Product 5">
+                    <div class="item-info">
+                        <p class="item-name" >HURB</p>
+                        <p class="item-name">$60.00</p>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" onclick="decrementQuantity('quantity5')">-</button>
+                            <input type="number" name="quantity5" id="quantity5" value="0" min="0" onchange="updateSelectedItems('quantity5')">
+                            <button class="quantity-btn" onclick="incrementQuantity('quantity5')">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" onclick="updateSelectedItems('quantity6', 'JEYUK', 'img\menu\menu-jeyuk.png')">
+                    <img src="img\menu\menu-jeyuk.png" alt="Product 6">
+                    <div class="item-info">
+                        <p class="item-name" >JEYUK</p>
+                        <p class="item-name">$12.00</p>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" onclick="decrementQuantity('quantity6')">-</button>
+                            <input type="number" name="quantity6" id="quantity6" value="0" min="0" onchange="updateSelectedItems('quantity6')">
+                            <button class="quantity-btn" onclick="incrementQuantity('quantity6')">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" onclick="updateSelectedItems('quantity7', 'MAKCHANG<', 'img\menu\menu-makchang.png')">
+                    <img src="img\menu\menu-makchang.png" alt="Product 7">
+                    <div class="item-info">
+                        <p class="item-name" >MAKCHANG</p>
+                        <p class="item-name">$10.00</p>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" onclick="decrementQuantity('quantity7')">-</button>
+                            <input type="number" name="quantity7" id="quantity7" value="0" min="0" onchange="updateSelectedItems('quantity7')">
+                            <button class="quantity-btn" onclick="incrementQuantity('quantity7')">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" onclick="updateSelectedItems('quantity8', 'MOKSAL', 'img\menu\menu-moksal.png')">
+                    <img src="img\menu\menu-moksal.png" alt="Product 8">
+                    <div class="item-info">
+                        <p class="item-name" >MOKSAL</p>
+                        <p class="item-name">$50.00</p>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" onclick="decrementQuantity('quantity8')">-</button>
+                            <input type="number" name="quantity8" id="quantity8" value="0" min="0" onchange="updateSelectedItems('quantity8')">
+                            <button class="quantity-btn" onclick="incrementQuantity('quantity8')">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" onclick="updateSelectedItems('quantity9', 'SPICY', 'img\menu\menu-spicy.png')">
+                    <img src="img\menu\menu-spicy.png" alt="Product 9">
+                    <div class="item-info">
+                        <p class="item-name" >SPICY</p>
+                        <p class="item-name" >$50.00</p>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" onclick="decrementQuantity('quantity9')">-</button>
+                            <input type="number" name="quantity9" id="quantity9" value="0" min="0" onchange="updateSelectedItems('quantity9')">
+                            <button class="quantity-btn" onclick="incrementQuantity('quantity9')">+</button>
+                        </div>
+                    </div>
+                </div>
+           
+
+            </div>
+            <div class="dashboard" style="background-color: burlywood;">
+                <h2><span style="color: crimson;">S</span>elected <span style="color: crimson;">I</span>tems</h2>
+                <ul class="selected-items-list" id="selected-items-list"></ul>
+                <div class="order-btn-container">
+                    <button class="order-btn" onclick="placeOrder()">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>
